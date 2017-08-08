@@ -1,0 +1,22 @@
+---
+title: "first"
+author: "Ramin Farhanian, Maryam Shahini"
+date: "8/7/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Question 01 (10 points)
+
+#Create the X matrix and print it from R.
+
+#R code
+
+
+```{r}
+X <- matrix(c(4, 1, 2, 5, 1, 1, 1, 4, 0, 2, 5, 2), nrow = 3, ncol = 4)
+print(X)
+```
