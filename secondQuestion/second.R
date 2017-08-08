@@ -43,6 +43,5 @@ volest3 <- Vol(100, AGIOreturn)
 plot(volest, type="l")
 
 lines(volest2, type="l",col="red")
-
 lines(volest3, type = "l", col="blue")
 
