@@ -1,8 +1,10 @@
 ---
-title: "first"
+title: "First"
 author: "Ramin Farhanian, Maryam Shahini"
 date: "8/7/2017"
-output: html_document
+output: 
+  html_document:
+    keep_md: TRUE
 ---
 
 ```{r setup, include=FALSE}
@@ -12,8 +14,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ##Question 01 (10 points)
 
 #Create the X matrix and print it from R.
-
-#R code
 
 
 ```{r}
