@@ -11,25 +11,22 @@ library(ggplot2)
 data("Orange")
 
 #Calculate the mean and the median of the trunk circumferences for different size of the trees. (Tree)
-
-cat("groups:",levels(Orange$Tree), "\n")
+cat("mean:", "\n")
 means <-tapply(Orange$circumference, Orange$Tree, FUN=mean)
-cat("means:", means, "\n")
+print(means)
 
-medians <-tapply(Orange$circumference, Orange$Tree, FUN=median)
-cat("medians:", medians, "\n")
-
+cat("median:", "\n")
+medians<- tapply(Orange$circumference, Orange$Tree, FUN=median)
+print(medians)
 
 #	Make a scatter plot of the trunk circumferences against the age of the tree. Use different plotting symbols for different size of trees. (Tree)
 
 scatterPlot <- ggplot(Orange,aes(Orange$circumference, Orange$age, color= Orange$Tree, shape= Orange$Tree)) + 
   geom_point() + labs(x = "Circumference") + labs(y = "Age") + labs(shape = "Tree Group")  + labs(color = "Tree Group") +
  labs(title = "Trunk circumferences vs. age of the tree")
-
 print(scatterPlot)
 
 #Display the trunk circumferences on a comparative boxplot against tree. Be sure you order the boxplots in the increasing order of maximum diameter.
-box <- ggplot(Orange[Orange$circumference,], aes( Orange$Tree, Orange$circumference)) + geom_boxplot() + labs(y = "Circumference") + labs(x = "Tree Group")
-
+box <- ggplot(Orange, aes( Orange$Tree, Orange$circumference)) + geom_boxplot() + labs(y = "Circumference") + labs(x = "Tree Group")
 print(box)
 
