@@ -79,8 +79,25 @@ Display the trunk circumferences on a comparative boxplot against tree. Be sure 
 
 
 ```r
+Orange$Tree <- factor(Orange$Tree, levels = as.integer(Orange$Tree[order(Orange$Tree)]))
+```
+
+```
+## Warning in `levels<-`(`*tmp*`, value = if (nl == nL) as.character(labels)
+## else paste0(labels, : duplicated levels in factors are deprecated
+```
+
+```r
 box <- ggplot(Orange, aes( Orange$Tree, Orange$circumference)) + geom_boxplot() + labs(y = "Circumference") + labs(x = "Tree Group")
 print(box)
+```
+
+```
+## Warning in `levels<-`(`*tmp*`, value = if (nl == nL) as.character(labels)
+## else paste0(labels, : duplicated levels in factors are deprecated
+
+## Warning in `levels<-`(`*tmp*`, value = if (nl == nL) as.character(labels)
+## else paste0(labels, : duplicated levels in factors are deprecated
 ```
 
 ![](third_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
