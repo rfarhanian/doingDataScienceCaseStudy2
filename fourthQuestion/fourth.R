@@ -54,7 +54,7 @@ print(barPlot)
 
 
 #Select a subset of data called “UStemp” where US land temperatures from 01/01/1990 in Temp data.
-UStemp <-TempData[ which((TempData$Date >= as.Date("1900-01-01", "%Y-%m-%d") & TempData$Country == "United States")), ]
+UStemp <-TempData[ which((TempData$Date >= as.Date("1990-01-01", "%Y-%m-%d") & TempData$Country == "United States")), ]
 
 #Create a new column to display the monthly average land temperatures in Fahrenheit (°F). T(°F) = T(°C) × 1.8 + 32
 UStemp$Monthly.AverageTemp.F <- tapply(UStemp$Monthly.AverageTemp, INDEX = seq_along(UStemp$Monthly.AverageTemp), FUN = function(c) { return (c*1.8+ 32)})
@@ -63,7 +63,7 @@ print(head(UStemp))
 #Calculate average land temperature by year and plot it. The original file has the average land temperature by month. 
 UStemp$Monthly.AverageTemp.Uncertainty <- NULL
 UStemp$Monthly.AverageTemp <- NULL
-byYear <- ts(UStemp, start=c(1969,1), end = c(2013, 1), frequency=12)
+byYear <- ts(UStemp, start=c(1990,1), end = c(2013, 1), frequency=12)
 plot(byYear)
 
 #Calculate the one year difference of average land temperature by year and provide the maximum difference (value) with corresponding years.
