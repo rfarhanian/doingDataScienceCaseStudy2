@@ -103,7 +103,9 @@ print(cityBarPlot)
 
 
 #Compare the two graphs in (i) and (iii)  and comment it.
-#WE NEED TO FINISH THIS WORK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+These two graphs illustrate that the countries who had cities with most temperature changes were not in the top 20 list. It indicates
+that the drastic temperature change in one city was not followed by other cities of the same country since 1900 to 2013. However, this
+trend can be a subset of longer trend. That is why we cannot extend our observation to other time intervals.
 
 
 
